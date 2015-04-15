@@ -4,6 +4,7 @@ This project enables you to calculate just about any parameter of movement - pos
 ## How it works?
 You devide your "symfony" into scenes. Each scene has to contain the final velocity, initial velocity and the time its active that way.
 For example, you can create the following scene:
+
 	var obj = new PhysicsParser([
 		// every object is a scene
 		{
