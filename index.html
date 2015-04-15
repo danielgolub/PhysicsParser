@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PhysicsParser</title>
+
+		<!-- css - styling -->
+		<link rel="stylesheet" type="text/css" href="angular-dchart.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	</head>
+	<body ng-app="physics" ng-controller="graphs">
+
+		<!-- graphs -->
+		<div class="container">
+			<h1>Positions graph:</h1>
+			<linechart data="positions" options="options" mode="" width="" height=""></linechart>
+			<h1>Velocities graph:</h1>
+			<linechart data="velocities" options="options" mode="" width="" height=""></linechart>
+			<h1>Accelerations graph:</h1>
+			<linechart data="accelerations" options="options" mode="" width="" height=""></linechart>
+		</div>
+
+		<!-- core script -->
+		<script type="text/javascript" src="physicsparser.js"></script>
+
+		<!-- data visualization scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="line-chart.min.js"></script>
+		<script type="text/javascript" src="graphs.js"></script>
+	</body>
+</html>
