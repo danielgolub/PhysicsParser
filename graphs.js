@@ -40,7 +40,7 @@ app.controller('graphs', [ '$scope', function($scope) {
 				label: "Function",
 				color: "#9467bd",
 				axis: "y",
-				type: "line",
+				type: "area",
 				thickness: "2px",
 				dotSize: 3,
 				id: "series"
@@ -60,5 +60,34 @@ app.controller('graphs', [ '$scope', function($scope) {
 		drawDots: true,
 		columnsHGap: 5
 	};
+
+	$scope.accelerationoptions = {
+		axes: {x: {type: "number", key: "x",max: frames.length}, y: {type: "linear"}},
+		series: [
+			{
+				y: "val",
+				label: "Function",
+				color: "#9467bd",
+				axis: "y",
+				type: "column",
+				thickness: "2px",
+				dotSize: 3,
+				id: "series"
+			}
+		],
+		tooltip: {
+			mode: "scrubber",
+			formatter: function (x, y, series) {
+				// return moment(x).fromNow() + ' : ' + y;
+				return y;
+			}
+		},
+		stacks: [],
+		lineMode: "linear",
+		tension: 0.7,
+		drawLegend: true,
+		drawDots: true,
+		columnsHGap: 5
+	}
 
 }])
